@@ -2,7 +2,7 @@
 import Pokecard from "./Pokecard";
 
 /** Creates */
-function Pokedex({ pokemon }){
+function Pokedex({ pokemon , isWinner = false}){
     //takes props (array of objects => {id: 4, name"charmander", type: fire, base_experience: 62} )
     return (<div className="Pokedex">
 
@@ -12,6 +12,8 @@ function Pokedex({ pokemon }){
             type = {p.type} 
             base_exp={p.base_experience}/>
         ))}
+
+       <b>{isWinner ? "This Hand Wins!!!" : ""}</b>
 
     </div>);
 }

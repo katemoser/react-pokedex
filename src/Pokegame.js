@@ -33,16 +33,35 @@ function Pokegame({ pokemon }) {
         display: 'inline-block',
     }
 
+    let hand1Exp = 0;
+    let hand2Exp = null;
+    let isWinner1;
+    let isWinner2;
+
+
+    for (let pkmn of hand1){
+        hand1Exp += pkmn.base_experience;
+    }
+
+    for (let pkmn of hand2){
+        hand2Exp += pkmn.base_experience;
+    }
+
+    hand1Exp > hand2Exp ? isWinner1 = true : isWinner2 = true;
+
+
 
     return (
         <div className="Pokegame">
             <div className="Hand" style={handStyle}>
                 Hand 1
-                <Pokedex pokemon={hand1} />
+                Total EXP: {hand1Exp}
+                <Pokedex pokemon={hand1} isWinner={isWinner1} />
             </div>
             <div className="Hand" style={handStyle}>
                 Hand 2
-                <Pokedex pokemon={hand2} />
+                Total EXP: {hand2Exp}
+                <Pokedex pokemon={hand2} isWinner={isWinner2}/>
             </div>
         </div>
     )

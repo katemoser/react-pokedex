@@ -1,0 +1,11 @@
+.Pokecard{
+    background-color: gray;
+    margin: 1em;
+    width: 150px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.Pokecard:hover {
+    background-color: yellow;
+}
