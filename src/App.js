@@ -1,6 +1,7 @@
 "use strict"; //CR: no longer need these when using create react app
 import './App.css';
 import Pokedex from './Pokedex';
+import Pokegame from './Pokegame';
 
 const POKEMON = [
   {id: 4,   name: 'Charmander', type: 'fire',     base_experience: 62},
@@ -17,8 +18,8 @@ const POKEMON = [
 function App() {
   return (
     <div className="App">
-      Pokedex
-      <Pokedex pokemon={POKEMON}/>
+      Pokegame
+      <Pokegame pokemon={POKEMON}/>
     </div>
   );
 }
